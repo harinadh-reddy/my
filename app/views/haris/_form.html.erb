@@ -1,0 +1,21 @@
+<%= form_for(@hari) do |f| %>
+  <% if @hari.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@hari.errors.count, "error") %> prohibited this hari from being saved:</h2>
+
+      <ul>
+      <% @hari.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,4 +1,7 @@
 Raj::Application.routes.draw do
+  resources :haris
+
+
   resources :posts
 
 
